@@ -1,6 +1,6 @@
 const keys = {
     
-    nameweb: 'Crud',
+    nameweb: 'Crud en PostgreSQL',
 
     database: {
         host: 'localhost',

@@ -9,7 +9,7 @@ ruta.get('/', (req, res)=>{
         console.log(resultado.rows);
         res.render('index', {
             keys,
-            resul: resultado
+            resul: resultado.rows
         });
     })
 })
