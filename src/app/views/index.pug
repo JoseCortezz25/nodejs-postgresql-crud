@@ -9,11 +9,26 @@ html(lang="en")
 
     h2= keys.nameweb
     .container
+        form(action="", method="post")
+            div.form-group
+                label(for="formGroupExampleInput").h2 Agregar 
+                br
+                input(type="text" id="formGroupExampleInput" name="nombre" placeholder="Ingresar").form-control
+                br
+                button(type="submit").btn.btn-success Agregar
+        
+            
+    .container
+        br
+
         each resultado in resul
-            .table-responsive
-                table.table
-                    tr
-                        td
-                            p= resultado.id_prueba
-                        td
-                            p.border-left-0: b= resultado.name
+                .table-responsive
+                    table.table
+                        tr
+                            td
+                                p= resultado.id_prueba
+                            td
+                                p.border-left-0: b= resultado.name
+                            td
+                                a(href=`/delete/${resultado.id_prueba}`).btn.btn-danger Eliminar
+                                a(href=`/update/${resultado.id_prueba}`).btn.btn-warning Actualizar
